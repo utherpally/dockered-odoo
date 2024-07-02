@@ -29,7 +29,7 @@ services:
             - traefik.http.services.odoo-secured.loadbalancer.server.port=8069
             - traefik.http.services.odoo-secured.loadbalancer.passHostHeader=true
 
-            - traefik.http.routers.odoo-longpolling.rule=Host(`${HOSTNAME:-xboss.localhost}`) && PathPrefix(`/longpolling/`)
+            - traefik.http.routers.odoo-longpolling.rule=Host(`${HOSTNAME:-xboss.localhost}`) && PathPrefix(`/websocket`)
             - traefik.http.routers.odoo-longpolling.entrypoints=websecure
             - traefik.http.routers.odoo-longpolling.tls=true
             # - traefik.http.routers.odoo-longpolling.priority=20
